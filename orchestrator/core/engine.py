@@ -33,6 +33,14 @@ class Engine:
 
         response = self.workflow.execute(task)
 
+        self.console.print("\n[bold blue]Execution Plan:[/bold blue]")
+
+        if task.steps:
+            for i, step in enumerate(task.steps, start=1):
+                self.console.print(f"{i}. {step}")
+        else:
+            self.console.print("No execution plan generated.")
+
         self.console.print("\n[bold green]Response:[/bold green]")
         self.console.print(response)
 
