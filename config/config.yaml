@@ -1,6 +1,9 @@
 project:
   name: AI-Orchestrator
 
+provider:
+  active: ollama
+
 providers:
   ollama:
     model: qwen2.5-coder:7b
