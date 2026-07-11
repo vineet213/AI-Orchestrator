@@ -3,8 +3,14 @@
     "description": "Introduce yourself in one sentence.",
     "status": "completed",
     "steps": [
-        "1. Open a new text file named \"introduction.md\".",
-        "2. Type \"Hello, my name is [Your Name].\" on the first line.",
-        "3. Save the file and close it."
+        "1. Determine platform (e.g., web, mobile).",
+        "2. Choose programming language(s).",
+        "3. Select appropriate frameworks or libraries.",
+        "4. Design user interface.",
+        "5. Implement core functionality.",
+        "6. Add security features.",
+        "7. Test application thoroughly.",
+        "8. Deploy to production environment.",
+        "9. Provide documentation and support."
     ]
 }
