@@ -10,13 +10,12 @@ class OpenCodeAdapter:
             raise RuntimeError("OpenCode executable not found.")
 
     def run(self, prompt: str):
-        command = f'"{self.executable}" run "{prompt}"'
-
         result = subprocess.run(
-            command,
-            shell=True,
+            [self.executable, "run", prompt],
             capture_output=True,
             text=True,
+            encoding="utf-8",
+            errors="replace",
         )
 
         return {

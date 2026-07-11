@@ -6,4 +6,16 @@ class Executor:
         self.adapter = OpenCodeAdapter()
 
     def execute(self, task):
-        return self.adapter.run(task.description)
+        prompt = task.description
+
+        if task.steps:
+            prompt += "\n\nImplementation Plan:\n"
+
+            for step in task.steps:
+                prompt += f"{step}\n"
+
+        print("\n========== PROMPT ==========\n")
+        print(prompt)
+        print("\n============================\n")
+
+        return self.adapter.run(prompt)

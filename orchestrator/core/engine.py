@@ -34,9 +34,13 @@ class Engine:
         self.console.print("[green]✓ Workflow Initialized[/green]")
         self.console.print("[green]✓ Memory Initialized[/green]")
 
+        description = self.console.input(
+            "\n[bold yellow]Enter software task:[/bold yellow] "
+        )
+
         task = Task(
-            title="Introduction",
-            description="Introduce yourself in one sentence."
+            title="User Task",
+            description=description
         )
 
         response = self.workflow.execute(task)
@@ -46,8 +50,8 @@ class Engine:
         self.console.print("\n[bold blue]Execution Plan:[/bold blue]")
 
         if task.steps:
-            for i, step in enumerate(task.steps, start=1):
-                self.console.print(f"{i}. {step}")
+            for step in task.steps:
+                self.console.print(step)
         else:
             self.console.print("No execution plan generated.")
 
