@@ -1,0 +1,10 @@
+{
+    "title": "Introduction",
+    "description": "Introduce yourself in one sentence.",
+    "status": "completed",
+    "steps": [
+        "1. Open a new text file named \"introduction.md\".",
+        "2. Type \"Hello, my name is [Your Name].\" on the first line.",
+        "3. Save the file and close it."
+    ]
+}

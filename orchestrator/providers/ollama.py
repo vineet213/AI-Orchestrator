@@ -8,8 +8,19 @@ class OllamaProvider(Provider):
         self.model = model
 
     def connect(self):
-        ollama.list()
-        return True
+        try:
+            models = ollama.list()
+
+            if not models.models:
+                raise RuntimeError("No Ollama models found.")
+
+            return True
+
+        except Exception as e:
+            raise RuntimeError(
+                "Failed to connect to Ollama. "
+                "Ensure the Ollama server is running and at least one model is installed."
+            ) from e
 
     def chat(self, prompt: str):
         response = ollama.chat(
