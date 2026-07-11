@@ -1,5 +1,9 @@
+from orchestrator.core.engine import Engine
+
+
 def main():
-    print("AI-Orchestrator CLI")
+    engine = Engine()
+    engine.start()
 
 
 if __name__ == "__main__":

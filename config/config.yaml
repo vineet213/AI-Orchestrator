@@ -1,1 +1,12 @@
-project_name: AI-Orchestrator
+project:
+  name: AI-Orchestrator
+
+providers:
+  ollama:
+    model: qwen2.5-coder:7b
+
+logging:
+  enabled: true
+
+git:
+  auto_commit: false
